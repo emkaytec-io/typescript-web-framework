@@ -12,14 +12,4 @@ export class User {
   public sync: Sync<UserProps> = new Sync<UserProps>(
     'http://localhost:3000/users'
   );
-
-  constructor(private data: UserProps) {}
-
-  get(propName: string): string | number {
-    return this.data[propName];
-  }
-
-  set(data: UserProps): void {
-    Object.assign(this.data, data);
-  }
 }
